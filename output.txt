@@ -1,0 +1,54 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0
+rootdir: C:\Users\ninte\Documents\SE-3150\testing-with-doubles-OliverOlsenUT
+plugins: describe-2.2.0, mock-3.15.1, spec-5.0.0
+collected 23 items
+
+test_mydb.py:
+
+MyDB:
+
+  Init:
+    \u2713 It assigns fname attribute
+    \u2713 It creates empty database if it does not exist
+    \u2713 It does not create database if it already exists
+
+  LoadStrings:
+    \u2713 It loads an array from a file and returns it
+
+  SaveString:
+    \u2713 It appends string element to existing database
+
+  SaveStrings:
+    \u2713 It saves the given array to a file
+
+test_squirrel_server.py:
+
+SquirrelServerHandler:
+
+  Create squirrels:
+    \u2713 It returns 404 for invalid resource path
+    \u2713 It returns 404 for resource id
+    \u2713 It creates squirrel
+
+  Delete squirrel:
+    \u2713 It returns 404 for invalid resource name
+    \u2713 It returns 404 for invalid resource id
+    \u2713 It deletes valid squirrel
+
+  Retrieve squirrels functionality:
+    \u2713 It queries db for squirrels
+    \u2713 It returns 200 status code
+    \u2713 It returns 404 for invalid resource path
+    \u2713 It returns 404 for invalid resource id
+    \u2713 It sends json content type header
+    \u2713 It calls end headers
+    \u2713 It returns response body with squirrels json data
+    \u2713 It returns response body with squirrel json data
+
+  Update squirrel:
+    \u2713 It returns 404 for invalid resource name
+    \u2713 It returns 404 for invalid resource id
+    \u2713 It updates valid squirrel
+
+============================= 23 passed in 0.24s ==============================
